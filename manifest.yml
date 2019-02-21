@@ -5,4 +5,4 @@ applications:
   memory: 256M
   random-route: true
   env:
-    CDN_CNAME: http://poccdnbucket.s3-website-us-east-1.amazonaws.com
+    CDN_CNAME: poccdnbucket.s3-website-us-east-1.amazonaws.com
