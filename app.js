@@ -13,6 +13,8 @@ app.get('*', (req, res) => {
 });
 
 const port = process.env.PORT || 8080;
+var cdnname= process.env.CDN_CNAME;
 app.listen(port, function(){
+    console.info(`cdn url from env:${cdnname}/`);
   console.info(`server listening on http://localhost:${port}/`);
 });
