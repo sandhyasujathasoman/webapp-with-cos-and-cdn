@@ -6,7 +6,7 @@ app.get('*', (req, res) => {
   fs.readFile('./public/index.html', (err, data) => {
     const page = data.toString()
       .split('__CDN_URL__')
-      .join(`https://${process.env.CDN_CNAME}`);
+      .join(`http://${process.env.CDN_CNAME}`);
     res.setHeader('Content-Type', 'text/html');
     res.send(page);
   });
