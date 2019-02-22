@@ -6,7 +6,7 @@ app.get('*', (req, res) => {
   fs.readFile('./public/index.html', (err, data) => {
     const page = data.toString()
       .split('__CDN_URL__')
-      .join(`http://poccdnbucket.s3-website-us-east-1.amazonaws.com`);
+      .join(`http://d5kty0mtm7s3p.cloudfront.net/`);
     res.setHeader('Content-Type', 'text/html');
     res.send(page);
   });
